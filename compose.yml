@@ -1,0 +1,192 @@
+name: vtiger-oss-lab
+
+x-db: &db
+  image: mariadb:10.11.14@sha256:dbe56e20372fc6d6b8e0e396866ba89c4c7f128c38c4f59aaa54d957db95790c
+  command:
+    - --default-storage-engine=InnoDB
+    - --character-set-server=utf8
+    - --collation-server=utf8_general_ci
+    - --local-infile=1
+    - --sql-mode=NO_ENGINE_SUBSTITUTION
+  environment:
+    MARIADB_DATABASE: vtiger
+    MARIADB_USER: vtiger
+    MARIADB_PASSWORD: vtiger-lab-db
+    MARIADB_ROOT_PASSWORD: vtiger-lab-root
+  healthcheck:
+    test: [CMD, healthcheck.sh, --connect, --innodb_initialized]
+    interval: 5s
+    timeout: 5s
+    retries: 60
+  networks: [lab]
+
+x-vtiger: &vtiger
+  environment: &vtiger-environment
+    VTIGER_DB_USER: vtiger
+    VTIGER_DB_PASSWORD: vtiger-lab-db
+    VTIGER_DB_NAME: vtiger
+    VTIGER_ADMIN_PASSWORD: vtiger-lab-admin
+    VTIGER_ACCESS_KEY: vtiger-lab-access-key
+  networks: [lab]
+  restart: unless-stopped
+
+services:
+  db80:
+    <<: *db
+    volumes: [db80:/var/lib/mysql]
+  vtiger80:
+    <<: *vtiger
+    build:
+      context: .
+      args:
+        VTIGER_VERSION: 8.0.0
+        VTIGER_SHA256: 4ee95c6746306e0d23b2a50f061085e09856652ad23229049e3245f0abd7225b
+    image: local/vtiger-oss-lab:8.0.0
+    environment:
+      <<: *vtiger-environment
+      VTIGER_DB_HOST: db80
+      VTIGER_PUBLIC_PORT: 8180
+    depends_on:
+      db80: { condition: service_healthy }
+    ports: ['127.0.0.1:8180:80']
+    volumes: [app80:/var/www/html]
+    healthcheck:
+      test:
+        [
+          CMD-SHELL,
+          'test -f /var/www/html/.lab-install-complete && curl -fsS http://127.0.0.1/index.php >/dev/null',
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 120
+
+  db81:
+    <<: *db
+    volumes: [db81:/var/lib/mysql]
+  vtiger81:
+    <<: *vtiger
+    build:
+      context: .
+      args:
+        VTIGER_VERSION: 8.1.0
+        VTIGER_SHA256: 6632086952733d212515afb1bcb97734f7fb18abc985b8be458ea8db399c6d06
+    image: local/vtiger-oss-lab:8.1.0
+    environment:
+      <<: *vtiger-environment
+      VTIGER_DB_HOST: db81
+      VTIGER_PUBLIC_PORT: 8181
+    depends_on:
+      db81: { condition: service_healthy }
+    ports: ['127.0.0.1:8181:80']
+    volumes: [app81:/var/www/html]
+    healthcheck:
+      test:
+        [
+          CMD-SHELL,
+          'test -f /var/www/html/.lab-install-complete && curl -fsS http://127.0.0.1/index.php >/dev/null',
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 120
+
+  db82:
+    <<: *db
+    volumes: [db82:/var/lib/mysql]
+  vtiger82:
+    <<: *vtiger
+    build:
+      context: .
+      args:
+        VTIGER_VERSION: 8.2.0
+        VTIGER_SHA256: 8a1cff8127e3ad1f3333210276c1ea60f816d6866d06c6fdff0375926b98327b
+    image: local/vtiger-oss-lab:8.2.0
+    environment:
+      <<: *vtiger-environment
+      VTIGER_DB_HOST: db82
+      VTIGER_PUBLIC_PORT: 8182
+    depends_on:
+      db82: { condition: service_healthy }
+    ports: ['127.0.0.1:8182:80']
+    volumes: [app82:/var/www/html]
+    healthcheck:
+      test:
+        [
+          CMD-SHELL,
+          'test -f /var/www/html/.lab-install-complete && curl -fsS http://127.0.0.1/index.php >/dev/null',
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 120
+
+  db83:
+    <<: *db
+    volumes: [db83:/var/lib/mysql]
+  vtiger83:
+    <<: *vtiger
+    build:
+      context: .
+      args:
+        VTIGER_VERSION: 8.3.0
+        VTIGER_SHA256: 7ae3decd46d1481c4848929cbca07b0df311cfd1be41a60ad17800e369980e0d
+    image: local/vtiger-oss-lab:8.3.0
+    environment:
+      <<: *vtiger-environment
+      VTIGER_DB_HOST: db83
+      VTIGER_PUBLIC_PORT: 8183
+    depends_on:
+      db83: { condition: service_healthy }
+    ports: ['127.0.0.1:8183:80']
+    volumes: [app83:/var/www/html]
+    healthcheck:
+      test:
+        [
+          CMD-SHELL,
+          'test -f /var/www/html/.lab-install-complete && curl -fsS http://127.0.0.1/index.php >/dev/null',
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 120
+
+  db84:
+    <<: *db
+    volumes: [db84:/var/lib/mysql]
+  vtiger84:
+    <<: *vtiger
+    build:
+      context: .
+      args:
+        VTIGER_VERSION: 8.4.0
+        VTIGER_SHA256: 9f903946e5fe9befa8b91ff96c51518117ca0850b788dee0713b8661d4c500b3
+    image: local/vtiger-oss-lab:8.4.0
+    environment:
+      <<: *vtiger-environment
+      VTIGER_DB_HOST: db84
+      VTIGER_PUBLIC_PORT: 8184
+    depends_on:
+      db84: { condition: service_healthy }
+    ports: ['127.0.0.1:8184:80']
+    volumes: [app84:/var/www/html]
+    healthcheck:
+      test:
+        [
+          CMD-SHELL,
+          'test -f /var/www/html/.lab-install-complete && curl -fsS http://127.0.0.1/index.php >/dev/null',
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 120
+
+networks:
+  lab:
+
+volumes:
+  app80:
+  app81:
+  app82:
+  app83:
+  app84:
+  db80:
+  db81:
+  db82:
+  db83:
+  db84:

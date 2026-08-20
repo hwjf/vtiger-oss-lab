@@ -1,0 +1,3464 @@
+{
+	"generatedAt": "2026-08-20T22:20:47.796Z",
+	"installations": [
+		{
+			"version": "8.0.0",
+			"kind": "fresh",
+			"url": "http://localhost:8180",
+			"operations": [
+				{
+					"name": "add_related",
+					"handlerPath": "include/Webservices/AddRelated.php",
+					"handlerMethod": "vtws_add_related",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "sourceRecordId",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "relatedRecordId",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relationIdLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "changePassword",
+					"handlerPath": "include/Webservices/ChangePassword.php",
+					"handlerMethod": "vtws_changePassword",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "oldPassword",
+							"type": "String",
+							"sequence": 2
+						},
+						{
+							"name": "newPassword",
+							"type": "String",
+							"sequence": 3
+						},
+						{
+							"name": "confirmPassword",
+							"type": "String",
+							"sequence": 4
+						}
+					]
+				},
+				{
+					"name": "convertlead",
+					"handlerPath": "include/Webservices/ConvertLead.php",
+					"handlerMethod": "vtws_convertlead",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "create",
+					"handlerPath": "include/Webservices/Create.php",
+					"handlerMethod": "vtws_create",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"handlerPath": "include/Webservices/Delete.php",
+					"handlerMethod": "vtws_delete",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "deleteUser",
+					"handlerPath": "include/Webservices/DeleteUser.php",
+					"handlerMethod": "vtws_deleteUser",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "newOwnerId",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "describe",
+					"handlerPath": "include/Webservices/DescribeObject.php",
+					"handlerMethod": "vtws_describe",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "extendsession",
+					"handlerPath": "include/Webservices/ExtendSession.php",
+					"handlerMethod": "vtws_extendSession",
+					"method": "POST",
+					"prelogin": true,
+					"parameters": []
+				},
+				{
+					"name": "files_retrieve",
+					"handlerPath": "include/Webservices/FileRetrieve.php",
+					"handlerMethod": "vtws_file_retrieve",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "getchallenge",
+					"handlerPath": "include/Webservices/AuthToken.php",
+					"handlerMethod": "vtws_getchallenge",
+					"method": "GET",
+					"prelogin": true,
+					"parameters": [
+						{
+							"name": "username",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "listtypes",
+					"handlerPath": "include/Webservices/ModuleTypes.php",
+					"handlerMethod": "vtws_listtypes",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "fieldTypeList",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "login",
+					"handlerPath": "include/Webservices/Login.php",
+					"handlerMethod": "vtws_login",
+					"method": "POST",
+					"prelogin": true,
+					"parameters": [
+						{
+							"name": "username",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "accessKey",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"handlerPath": "include/Webservices/Logout.php",
+					"handlerMethod": "vtws_logout",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "sessionName",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.alertdetailswithmessage",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_alertDetailsWithMessage",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "alertid",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchallalerts",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchAllAlerts",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": []
+				},
+				{
+					"name": "mobile.fetchmodulefilters",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchModuleFilters",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchrecord",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchRecord",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchrecordwithgrouping",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchRecordWithGrouping",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.filterdetailswithcount",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_filterDetailsWithCount",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "filterid",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.listmodulerecords",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_listModuleRecords",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elements",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.query",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_query",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.querywithgrouping",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_queryWithGrouping",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.saverecord",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_saveRecord",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "values",
+							"type": "encoded",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.syncModuleRecords",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_syncModuleRecords",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "syncToken",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "query",
+					"handlerPath": "include/Webservices/Query.php",
+					"handlerMethod": "vtws_query",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "query",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "query_related",
+					"handlerPath": "include/Webservices/QueryRelated.php",
+					"handlerMethod": "vtws_query_related",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relatedLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "relatedtypes",
+					"handlerPath": "include/Webservices/RelatedTypes.php",
+					"handlerMethod": "vtws_relatedtypes",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve",
+					"handlerPath": "include/Webservices/Retrieve.php",
+					"handlerMethod": "vtws_retrieve",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve_inventory",
+					"handlerPath": "include/Webservices/LineItem/RetrieveInventory.php",
+					"handlerMethod": "vtws_retrieve_inventory",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve_related",
+					"handlerPath": "include/Webservices/RetrieveRelated.php",
+					"handlerMethod": "vtws_retrieve_related",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "relatedType",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relatedLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "revise",
+					"handlerPath": "include/Webservices/Revise.php",
+					"handlerMethod": "vtws_revise",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "Encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "sync",
+					"handlerPath": "include/Webservices/GetUpdates.php",
+					"handlerMethod": "vtws_sync",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "modifiedTime",
+							"type": "DateTime",
+							"sequence": 1
+						},
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "update",
+					"handlerPath": "include/Webservices/Update.php",
+					"handlerMethod": "vtws_update",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "wsapp_deregister",
+					"handlerPath": "modules/WSAPP/api/ws/DeRegister.php",
+					"handlerMethod": "wsapp_deregister",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "type",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_get",
+					"handlerPath": "modules/WSAPP/api/ws/Get.php",
+					"handlerMethod": "wsapp_get",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "token",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "wsapp_map",
+					"handlerPath": "modules/WSAPP/api/ws/Map.php",
+					"handlerMethod": "wsapp_map",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_put",
+					"handlerPath": "modules/WSAPP/api/ws/Put.php",
+					"handlerMethod": "wsapp_put",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_register",
+					"handlerPath": "modules/WSAPP/api/ws/Register.php",
+					"handlerMethod": "wsapp_register",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "type",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "synctype",
+							"type": "string",
+							"sequence": 2
+						}
+					]
+				}
+			],
+			"handlerSignatures": {
+				"files_retrieve": "$file_id, $user",
+				"convertlead": "$entityvalues, $user",
+				"sync": "$mtime,$elementType,$syncType,$user"
+			},
+			"assessment": {
+				"files_retrieve": "registration-handler-mismatch",
+				"convertlead": "modern-element-registration",
+				"sync": "registration-handler-mismatch"
+			},
+			"probe": {
+				"login": {
+					"status": "ok"
+				},
+				"listtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"sync": {
+					"status": "failed",
+					"httpStatus": 500
+				}
+			}
+		},
+		{
+			"version": "8.1.0",
+			"kind": "fresh",
+			"url": "http://localhost:8181",
+			"operations": [
+				{
+					"name": "add_related",
+					"handlerPath": "include/Webservices/AddRelated.php",
+					"handlerMethod": "vtws_add_related",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "sourceRecordId",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "relatedRecordId",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relationIdLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "changePassword",
+					"handlerPath": "include/Webservices/ChangePassword.php",
+					"handlerMethod": "vtws_changePassword",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "oldPassword",
+							"type": "String",
+							"sequence": 2
+						},
+						{
+							"name": "newPassword",
+							"type": "String",
+							"sequence": 3
+						},
+						{
+							"name": "confirmPassword",
+							"type": "String",
+							"sequence": 4
+						}
+					]
+				},
+				{
+					"name": "convertlead",
+					"handlerPath": "include/Webservices/ConvertLead.php",
+					"handlerMethod": "vtws_convertlead",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "create",
+					"handlerPath": "include/Webservices/Create.php",
+					"handlerMethod": "vtws_create",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"handlerPath": "include/Webservices/Delete.php",
+					"handlerMethod": "vtws_delete",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "deleteUser",
+					"handlerPath": "include/Webservices/DeleteUser.php",
+					"handlerMethod": "vtws_deleteUser",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "newOwnerId",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "describe",
+					"handlerPath": "include/Webservices/DescribeObject.php",
+					"handlerMethod": "vtws_describe",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "extendsession",
+					"handlerPath": "include/Webservices/ExtendSession.php",
+					"handlerMethod": "vtws_extendSession",
+					"method": "POST",
+					"prelogin": true,
+					"parameters": []
+				},
+				{
+					"name": "files_retrieve",
+					"handlerPath": "include/Webservices/FileRetrieve.php",
+					"handlerMethod": "vtws_file_retrieve",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "getchallenge",
+					"handlerPath": "include/Webservices/AuthToken.php",
+					"handlerMethod": "vtws_getchallenge",
+					"method": "GET",
+					"prelogin": true,
+					"parameters": [
+						{
+							"name": "username",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "listtypes",
+					"handlerPath": "include/Webservices/ModuleTypes.php",
+					"handlerMethod": "vtws_listtypes",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "fieldTypeList",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "login",
+					"handlerPath": "include/Webservices/Login.php",
+					"handlerMethod": "vtws_login",
+					"method": "POST",
+					"prelogin": true,
+					"parameters": [
+						{
+							"name": "username",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "accessKey",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"handlerPath": "include/Webservices/Logout.php",
+					"handlerMethod": "vtws_logout",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "sessionName",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.alertdetailswithmessage",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_alertDetailsWithMessage",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "alertid",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchallalerts",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchAllAlerts",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": []
+				},
+				{
+					"name": "mobile.fetchmodulefilters",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchModuleFilters",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchrecord",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchRecord",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchrecordwithgrouping",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchRecordWithGrouping",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.filterdetailswithcount",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_filterDetailsWithCount",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "filterid",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.listmodulerecords",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_listModuleRecords",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elements",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.query",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_query",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.querywithgrouping",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_queryWithGrouping",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.saverecord",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_saveRecord",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "values",
+							"type": "encoded",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.syncModuleRecords",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_syncModuleRecords",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "syncToken",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "query",
+					"handlerPath": "include/Webservices/Query.php",
+					"handlerMethod": "vtws_query",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "query",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "query_related",
+					"handlerPath": "include/Webservices/QueryRelated.php",
+					"handlerMethod": "vtws_query_related",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relatedLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "relatedtypes",
+					"handlerPath": "include/Webservices/RelatedTypes.php",
+					"handlerMethod": "vtws_relatedtypes",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve",
+					"handlerPath": "include/Webservices/Retrieve.php",
+					"handlerMethod": "vtws_retrieve",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve_inventory",
+					"handlerPath": "include/Webservices/LineItem/RetrieveInventory.php",
+					"handlerMethod": "vtws_retrieve_inventory",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve_related",
+					"handlerPath": "include/Webservices/RetrieveRelated.php",
+					"handlerMethod": "vtws_retrieve_related",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "relatedType",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relatedLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "revise",
+					"handlerPath": "include/Webservices/Revise.php",
+					"handlerMethod": "vtws_revise",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "Encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "sync",
+					"handlerPath": "include/Webservices/GetUpdates.php",
+					"handlerMethod": "vtws_sync",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "modifiedTime",
+							"type": "DateTime",
+							"sequence": 1
+						},
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "update",
+					"handlerPath": "include/Webservices/Update.php",
+					"handlerMethod": "vtws_update",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "wsapp_deregister",
+					"handlerPath": "modules/WSAPP/api/ws/DeRegister.php",
+					"handlerMethod": "wsapp_deregister",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "type",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_get",
+					"handlerPath": "modules/WSAPP/api/ws/Get.php",
+					"handlerMethod": "wsapp_get",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "token",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "wsapp_map",
+					"handlerPath": "modules/WSAPP/api/ws/Map.php",
+					"handlerMethod": "wsapp_map",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_put",
+					"handlerPath": "modules/WSAPP/api/ws/Put.php",
+					"handlerMethod": "wsapp_put",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_register",
+					"handlerPath": "modules/WSAPP/api/ws/Register.php",
+					"handlerMethod": "wsapp_register",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "type",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "synctype",
+							"type": "string",
+							"sequence": 2
+						}
+					]
+				}
+			],
+			"handlerSignatures": {
+				"files_retrieve": "$file_id, $user",
+				"convertlead": "$entityvalues, $user",
+				"sync": "$mtime,$elementType,$syncType,$user"
+			},
+			"assessment": {
+				"files_retrieve": "registration-handler-mismatch",
+				"convertlead": "modern-element-registration",
+				"sync": "registration-handler-mismatch"
+			},
+			"probe": {
+				"login": {
+					"status": "ok"
+				},
+				"listtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"sync": {
+					"status": "failed",
+					"httpStatus": 500
+				}
+			}
+		},
+		{
+			"version": "8.2.0",
+			"kind": "fresh",
+			"url": "http://localhost:8182",
+			"operations": [
+				{
+					"name": "add_related",
+					"handlerPath": "include/Webservices/AddRelated.php",
+					"handlerMethod": "vtws_add_related",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "sourceRecordId",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "relatedRecordId",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relationIdLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "changePassword",
+					"handlerPath": "include/Webservices/ChangePassword.php",
+					"handlerMethod": "vtws_changePassword",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "oldPassword",
+							"type": "String",
+							"sequence": 2
+						},
+						{
+							"name": "newPassword",
+							"type": "String",
+							"sequence": 3
+						},
+						{
+							"name": "confirmPassword",
+							"type": "String",
+							"sequence": 4
+						}
+					]
+				},
+				{
+					"name": "convertlead",
+					"handlerPath": "include/Webservices/ConvertLead.php",
+					"handlerMethod": "vtws_convertlead",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "create",
+					"handlerPath": "include/Webservices/Create.php",
+					"handlerMethod": "vtws_create",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"handlerPath": "include/Webservices/Delete.php",
+					"handlerMethod": "vtws_delete",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "deleteUser",
+					"handlerPath": "include/Webservices/DeleteUser.php",
+					"handlerMethod": "vtws_deleteUser",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "newOwnerId",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "describe",
+					"handlerPath": "include/Webservices/DescribeObject.php",
+					"handlerMethod": "vtws_describe",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "extendsession",
+					"handlerPath": "include/Webservices/ExtendSession.php",
+					"handlerMethod": "vtws_extendSession",
+					"method": "POST",
+					"prelogin": true,
+					"parameters": []
+				},
+				{
+					"name": "files_retrieve",
+					"handlerPath": "include/Webservices/FileRetrieve.php",
+					"handlerMethod": "vtws_file_retrieve",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "getchallenge",
+					"handlerPath": "include/Webservices/AuthToken.php",
+					"handlerMethod": "vtws_getchallenge",
+					"method": "GET",
+					"prelogin": true,
+					"parameters": [
+						{
+							"name": "username",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "listtypes",
+					"handlerPath": "include/Webservices/ModuleTypes.php",
+					"handlerMethod": "vtws_listtypes",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "fieldTypeList",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "login",
+					"handlerPath": "include/Webservices/Login.php",
+					"handlerMethod": "vtws_login",
+					"method": "POST",
+					"prelogin": true,
+					"parameters": [
+						{
+							"name": "username",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "accessKey",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"handlerPath": "include/Webservices/Logout.php",
+					"handlerMethod": "vtws_logout",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "sessionName",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.alertdetailswithmessage",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_alertDetailsWithMessage",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "alertid",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchallalerts",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchAllAlerts",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": []
+				},
+				{
+					"name": "mobile.fetchmodulefilters",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchModuleFilters",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchrecord",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchRecord",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchrecordwithgrouping",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchRecordWithGrouping",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.filterdetailswithcount",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_filterDetailsWithCount",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "filterid",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.listmodulerecords",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_listModuleRecords",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elements",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.query",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_query",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.querywithgrouping",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_queryWithGrouping",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.saverecord",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_saveRecord",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "values",
+							"type": "encoded",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.syncModuleRecords",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_syncModuleRecords",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "syncToken",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "query",
+					"handlerPath": "include/Webservices/Query.php",
+					"handlerMethod": "vtws_query",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "query",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "query_related",
+					"handlerPath": "include/Webservices/QueryRelated.php",
+					"handlerMethod": "vtws_query_related",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relatedLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "relatedtypes",
+					"handlerPath": "include/Webservices/RelatedTypes.php",
+					"handlerMethod": "vtws_relatedtypes",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve",
+					"handlerPath": "include/Webservices/Retrieve.php",
+					"handlerMethod": "vtws_retrieve",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve_inventory",
+					"handlerPath": "include/Webservices/LineItem/RetrieveInventory.php",
+					"handlerMethod": "vtws_retrieve_inventory",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve_related",
+					"handlerPath": "include/Webservices/RetrieveRelated.php",
+					"handlerMethod": "vtws_retrieve_related",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "relatedType",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relatedLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "revise",
+					"handlerPath": "include/Webservices/Revise.php",
+					"handlerMethod": "vtws_revise",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "Encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "sync",
+					"handlerPath": "include/Webservices/GetUpdates.php",
+					"handlerMethod": "vtws_sync",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "modifiedTime",
+							"type": "DateTime",
+							"sequence": 1
+						},
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "update",
+					"handlerPath": "include/Webservices/Update.php",
+					"handlerMethod": "vtws_update",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "wsapp_deregister",
+					"handlerPath": "modules/WSAPP/api/ws/DeRegister.php",
+					"handlerMethod": "wsapp_deregister",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "type",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_get",
+					"handlerPath": "modules/WSAPP/api/ws/Get.php",
+					"handlerMethod": "wsapp_get",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "token",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "wsapp_map",
+					"handlerPath": "modules/WSAPP/api/ws/Map.php",
+					"handlerMethod": "wsapp_map",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_put",
+					"handlerPath": "modules/WSAPP/api/ws/Put.php",
+					"handlerMethod": "wsapp_put",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_register",
+					"handlerPath": "modules/WSAPP/api/ws/Register.php",
+					"handlerMethod": "wsapp_register",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "type",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "synctype",
+							"type": "string",
+							"sequence": 2
+						}
+					]
+				}
+			],
+			"handlerSignatures": {
+				"files_retrieve": "$file_id, $user",
+				"convertlead": "$entityvalues, $user",
+				"sync": "$mtime,$elementType,$syncType,$user"
+			},
+			"assessment": {
+				"files_retrieve": "registration-handler-mismatch",
+				"convertlead": "modern-element-registration",
+				"sync": "registration-handler-mismatch"
+			},
+			"probe": {
+				"login": {
+					"status": "ok"
+				},
+				"listtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"sync": {
+					"status": "failed",
+					"httpStatus": 500
+				}
+			}
+		},
+		{
+			"version": "8.3.0",
+			"kind": "fresh",
+			"url": "http://localhost:8183",
+			"operations": [
+				{
+					"name": "add_related",
+					"handlerPath": "include/Webservices/AddRelated.php",
+					"handlerMethod": "vtws_add_related",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "sourceRecordId",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "relatedRecordId",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relationIdLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "changePassword",
+					"handlerPath": "include/Webservices/ChangePassword.php",
+					"handlerMethod": "vtws_changePassword",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "oldPassword",
+							"type": "String",
+							"sequence": 2
+						},
+						{
+							"name": "newPassword",
+							"type": "String",
+							"sequence": 3
+						},
+						{
+							"name": "confirmPassword",
+							"type": "String",
+							"sequence": 4
+						}
+					]
+				},
+				{
+					"name": "convertlead",
+					"handlerPath": "include/Webservices/ConvertLead.php",
+					"handlerMethod": "vtws_convertlead",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "create",
+					"handlerPath": "include/Webservices/Create.php",
+					"handlerMethod": "vtws_create",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"handlerPath": "include/Webservices/Delete.php",
+					"handlerMethod": "vtws_delete",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "deleteUser",
+					"handlerPath": "include/Webservices/DeleteUser.php",
+					"handlerMethod": "vtws_deleteUser",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "newOwnerId",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "describe",
+					"handlerPath": "include/Webservices/DescribeObject.php",
+					"handlerMethod": "vtws_describe",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "extendsession",
+					"handlerPath": "include/Webservices/ExtendSession.php",
+					"handlerMethod": "vtws_extendSession",
+					"method": "POST",
+					"prelogin": true,
+					"parameters": []
+				},
+				{
+					"name": "files_retrieve",
+					"handlerPath": "include/Webservices/FileRetrieve.php",
+					"handlerMethod": "vtws_file_retrieve",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "getchallenge",
+					"handlerPath": "include/Webservices/AuthToken.php",
+					"handlerMethod": "vtws_getchallenge",
+					"method": "GET",
+					"prelogin": true,
+					"parameters": [
+						{
+							"name": "username",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "listtypes",
+					"handlerPath": "include/Webservices/ModuleTypes.php",
+					"handlerMethod": "vtws_listtypes",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "fieldTypeList",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "login",
+					"handlerPath": "include/Webservices/Login.php",
+					"handlerMethod": "vtws_login",
+					"method": "POST",
+					"prelogin": true,
+					"parameters": [
+						{
+							"name": "username",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "accessKey",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"handlerPath": "include/Webservices/Logout.php",
+					"handlerMethod": "vtws_logout",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "sessionName",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.alertdetailswithmessage",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_alertDetailsWithMessage",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "alertid",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchallalerts",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchAllAlerts",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": []
+				},
+				{
+					"name": "mobile.fetchmodulefilters",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchModuleFilters",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchrecord",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchRecord",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchrecordwithgrouping",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchRecordWithGrouping",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.filterdetailswithcount",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_filterDetailsWithCount",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "filterid",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.listmodulerecords",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_listModuleRecords",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elements",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.query",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_query",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.querywithgrouping",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_queryWithGrouping",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.saverecord",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_saveRecord",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "values",
+							"type": "encoded",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.syncModuleRecords",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_syncModuleRecords",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "syncToken",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "query",
+					"handlerPath": "include/Webservices/Query.php",
+					"handlerMethod": "vtws_query",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "query",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "query_related",
+					"handlerPath": "include/Webservices/QueryRelated.php",
+					"handlerMethod": "vtws_query_related",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relatedLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "relatedtypes",
+					"handlerPath": "include/Webservices/RelatedTypes.php",
+					"handlerMethod": "vtws_relatedtypes",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve",
+					"handlerPath": "include/Webservices/Retrieve.php",
+					"handlerMethod": "vtws_retrieve",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve_inventory",
+					"handlerPath": "include/Webservices/LineItem/RetrieveInventory.php",
+					"handlerMethod": "vtws_retrieve_inventory",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve_related",
+					"handlerPath": "include/Webservices/RetrieveRelated.php",
+					"handlerMethod": "vtws_retrieve_related",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "relatedType",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relatedLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "revise",
+					"handlerPath": "include/Webservices/Revise.php",
+					"handlerMethod": "vtws_revise",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "Encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "sync",
+					"handlerPath": "include/Webservices/GetUpdates.php",
+					"handlerMethod": "vtws_sync",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "modifiedTime",
+							"type": "DateTime",
+							"sequence": 1
+						},
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "update",
+					"handlerPath": "include/Webservices/Update.php",
+					"handlerMethod": "vtws_update",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "wsapp_deregister",
+					"handlerPath": "modules/WSAPP/api/ws/DeRegister.php",
+					"handlerMethod": "wsapp_deregister",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "type",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_get",
+					"handlerPath": "modules/WSAPP/api/ws/Get.php",
+					"handlerMethod": "wsapp_get",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "token",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "wsapp_map",
+					"handlerPath": "modules/WSAPP/api/ws/Map.php",
+					"handlerMethod": "wsapp_map",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_put",
+					"handlerPath": "modules/WSAPP/api/ws/Put.php",
+					"handlerMethod": "wsapp_put",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_register",
+					"handlerPath": "modules/WSAPP/api/ws/Register.php",
+					"handlerMethod": "wsapp_register",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "type",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "synctype",
+							"type": "string",
+							"sequence": 2
+						}
+					]
+				}
+			],
+			"handlerSignatures": {
+				"files_retrieve": "$file_id, $user",
+				"convertlead": "$entityvalues, $user",
+				"sync": "$mtime,$elementType,$syncType,$user"
+			},
+			"assessment": {
+				"files_retrieve": "registration-handler-mismatch",
+				"convertlead": "modern-element-registration",
+				"sync": "registration-handler-mismatch"
+			},
+			"probe": {
+				"login": {
+					"status": "ok"
+				},
+				"listtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"sync": {
+					"status": "failed",
+					"httpStatus": 500
+				}
+			}
+		},
+		{
+			"version": "8.4.0",
+			"kind": "fresh",
+			"url": "http://localhost:8184",
+			"operations": [
+				{
+					"name": "add_related",
+					"handlerPath": "include/Webservices/AddRelated.php",
+					"handlerMethod": "vtws_add_related",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "sourceRecordId",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "relatedRecordId",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relationIdLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "changePassword",
+					"handlerPath": "include/Webservices/ChangePassword.php",
+					"handlerMethod": "vtws_changePassword",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "oldPassword",
+							"type": "String",
+							"sequence": 2
+						},
+						{
+							"name": "newPassword",
+							"type": "String",
+							"sequence": 3
+						},
+						{
+							"name": "confirmPassword",
+							"type": "String",
+							"sequence": 4
+						}
+					]
+				},
+				{
+					"name": "convertlead",
+					"handlerPath": "include/Webservices/ConvertLead.php",
+					"handlerMethod": "vtws_convertlead",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "create",
+					"handlerPath": "include/Webservices/Create.php",
+					"handlerMethod": "vtws_create",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"handlerPath": "include/Webservices/Delete.php",
+					"handlerMethod": "vtws_delete",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "deleteUser",
+					"handlerPath": "include/Webservices/DeleteUser.php",
+					"handlerMethod": "vtws_deleteUser",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "newOwnerId",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "describe",
+					"handlerPath": "include/Webservices/DescribeObject.php",
+					"handlerMethod": "vtws_describe",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "extendsession",
+					"handlerPath": "include/Webservices/ExtendSession.php",
+					"handlerMethod": "vtws_extendSession",
+					"method": "POST",
+					"prelogin": true,
+					"parameters": []
+				},
+				{
+					"name": "files_retrieve",
+					"handlerPath": "include/Webservices/FileRetrieve.php",
+					"handlerMethod": "vtws_file_retrieve",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "getchallenge",
+					"handlerPath": "include/Webservices/AuthToken.php",
+					"handlerMethod": "vtws_getchallenge",
+					"method": "GET",
+					"prelogin": true,
+					"parameters": [
+						{
+							"name": "username",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "listtypes",
+					"handlerPath": "include/Webservices/ModuleTypes.php",
+					"handlerMethod": "vtws_listtypes",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "fieldTypeList",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "login",
+					"handlerPath": "include/Webservices/Login.php",
+					"handlerMethod": "vtws_login",
+					"method": "POST",
+					"prelogin": true,
+					"parameters": [
+						{
+							"name": "username",
+							"type": "String",
+							"sequence": 1
+						},
+						{
+							"name": "accessKey",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"handlerPath": "include/Webservices/Logout.php",
+					"handlerMethod": "vtws_logout",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "sessionName",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.alertdetailswithmessage",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_alertDetailsWithMessage",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "alertid",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchallalerts",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchAllAlerts",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": []
+				},
+				{
+					"name": "mobile.fetchmodulefilters",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchModuleFilters",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchrecord",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchRecord",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.fetchrecordwithgrouping",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_fetchRecordWithGrouping",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.filterdetailswithcount",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_filterDetailsWithCount",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "filterid",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.listmodulerecords",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_listModuleRecords",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elements",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "mobile.query",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_query",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.querywithgrouping",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_queryWithGrouping",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.saverecord",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_saveRecord",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "record",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "values",
+							"type": "encoded",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "mobile.syncModuleRecords",
+					"handlerPath": "modules/Mobile/api/wsapi.php",
+					"handlerMethod": "mobile_ws_syncModuleRecords",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "syncToken",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "page",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "query",
+					"handlerPath": "include/Webservices/Query.php",
+					"handlerMethod": "vtws_query",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "query",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "query_related",
+					"handlerPath": "include/Webservices/QueryRelated.php",
+					"handlerMethod": "vtws_query_related",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "query",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relatedLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "relatedtypes",
+					"handlerPath": "include/Webservices/RelatedTypes.php",
+					"handlerMethod": "vtws_relatedtypes",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "elementType",
+							"type": "string",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve",
+					"handlerPath": "include/Webservices/Retrieve.php",
+					"handlerMethod": "vtws_retrieve",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve_inventory",
+					"handlerPath": "include/Webservices/LineItem/RetrieveInventory.php",
+					"handlerMethod": "vtws_retrieve_inventory",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "String",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "retrieve_related",
+					"handlerPath": "include/Webservices/RetrieveRelated.php",
+					"handlerMethod": "vtws_retrieve_related",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "id",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "relatedType",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "relatedLabel",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "revise",
+					"handlerPath": "include/Webservices/Revise.php",
+					"handlerMethod": "vtws_revise",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "Encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "sync",
+					"handlerPath": "include/Webservices/GetUpdates.php",
+					"handlerMethod": "vtws_sync",
+					"method": "GET",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "modifiedTime",
+							"type": "DateTime",
+							"sequence": 1
+						},
+						{
+							"name": "elementType",
+							"type": "String",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "update",
+					"handlerPath": "include/Webservices/Update.php",
+					"handlerMethod": "vtws_update",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 1
+						}
+					]
+				},
+				{
+					"name": "wsapp_deregister",
+					"handlerPath": "modules/WSAPP/api/ws/DeRegister.php",
+					"handlerMethod": "wsapp_deregister",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "type",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_get",
+					"handlerPath": "modules/WSAPP/api/ws/Get.php",
+					"handlerMethod": "wsapp_get",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "module",
+							"type": "string",
+							"sequence": 2
+						},
+						{
+							"name": "token",
+							"type": "string",
+							"sequence": 3
+						}
+					]
+				},
+				{
+					"name": "wsapp_map",
+					"handlerPath": "modules/WSAPP/api/ws/Map.php",
+					"handlerMethod": "wsapp_map",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_put",
+					"handlerPath": "modules/WSAPP/api/ws/Put.php",
+					"handlerMethod": "wsapp_put",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "key",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "element",
+							"type": "encoded",
+							"sequence": 2
+						}
+					]
+				},
+				{
+					"name": "wsapp_register",
+					"handlerPath": "modules/WSAPP/api/ws/Register.php",
+					"handlerMethod": "wsapp_register",
+					"method": "POST",
+					"prelogin": false,
+					"parameters": [
+						{
+							"name": "type",
+							"type": "string",
+							"sequence": 1
+						},
+						{
+							"name": "synctype",
+							"type": "string",
+							"sequence": 2
+						}
+					]
+				}
+			],
+			"handlerSignatures": {
+				"files_retrieve": "$id, $user",
+				"convertlead": "$element, $user",
+				"sync": "$modifiedTime,$elementType,$syncType,$user"
+			},
+			"assessment": {
+				"files_retrieve": "compatible",
+				"convertlead": "modern-element-registration",
+				"sync": "registration-handler-mismatch"
+			},
+			"probe": {
+				"login": {
+					"status": "ok"
+				},
+				"listtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"sync": {
+					"status": "failed",
+					"httpStatus": 500
+				}
+			}
+		}
+	],
+	"differences": [
+		{
+			"from": "8.0.0",
+			"to": "8.1.0",
+			"addedOperations": [],
+			"removedOperations": [],
+			"changedOperations": [],
+			"changedHandlerSignatures": []
+		},
+		{
+			"from": "8.1.0",
+			"to": "8.2.0",
+			"addedOperations": [],
+			"removedOperations": [],
+			"changedOperations": [],
+			"changedHandlerSignatures": []
+		},
+		{
+			"from": "8.2.0",
+			"to": "8.3.0",
+			"addedOperations": [],
+			"removedOperations": [],
+			"changedOperations": [],
+			"changedHandlerSignatures": []
+		},
+		{
+			"from": "8.3.0",
+			"to": "8.4.0",
+			"addedOperations": [],
+			"removedOperations": [],
+			"changedOperations": [],
+			"changedHandlerSignatures": ["files_retrieve", "convertlead", "sync"]
+		}
+	]
+}
