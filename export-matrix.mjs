@@ -130,6 +130,21 @@ async function probe(port) {
 		operation: 'listtypes',
 		sessionName,
 	});
+	const describe = await vtigerRequest(port, 'GET', {
+		operation: 'describe',
+		sessionName,
+		elementType: 'Contacts',
+	});
+	const relatedtypes = await vtigerRequest(port, 'GET', {
+		operation: 'relatedtypes',
+		sessionName,
+		elementType: 'Contacts',
+	});
+	const query = await vtigerRequest(port, 'GET', {
+		operation: 'query',
+		sessionName,
+		query: 'SELECT id FROM Contacts ORDER BY id LIMIT 0, 1;',
+	});
 	const futureCursor = String(Math.floor(Date.now() / 1000) + 3600);
 	const sync = await vtigerRequest(port, 'GET', {
 		operation: 'sync',
@@ -144,6 +159,18 @@ async function probe(port) {
 		listtypes: {
 			status: listtypes.body?.success === true ? 'ok' : 'failed',
 			httpStatus: listtypes.httpStatus,
+		},
+		describe: {
+			status: describe.body?.success === true ? 'ok' : 'failed',
+			httpStatus: describe.httpStatus,
+		},
+		relatedtypes: {
+			status: relatedtypes.body?.success === true ? 'ok' : 'failed',
+			httpStatus: relatedtypes.httpStatus,
+		},
+		query: {
+			status: query.body?.success === true ? 'ok' : 'failed',
+			httpStatus: query.httpStatus,
 		},
 		sync: {
 			status: sync.body?.success === true ? 'ok' : 'failed',

@@ -1,5 +1,5 @@
 {
-	"generatedAt": "2026-08-20T22:20:47.796Z",
+	"generatedAt": "2026-08-20T22:31:14.985Z",
 	"installations": [
 		{
 			"version": "8.0.0",
@@ -677,6 +677,18 @@
 					"status": "ok"
 				},
 				"listtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"describe": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"relatedtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"query": {
 					"status": "ok",
 					"httpStatus": 200
 				},
@@ -1365,6 +1377,18 @@
 					"status": "ok",
 					"httpStatus": 200
 				},
+				"describe": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"relatedtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"query": {
+					"status": "ok",
+					"httpStatus": 200
+				},
 				"sync": {
 					"status": "failed",
 					"httpStatus": 500
@@ -2047,6 +2071,18 @@
 					"status": "ok"
 				},
 				"listtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"describe": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"relatedtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"query": {
 					"status": "ok",
 					"httpStatus": 200
 				},
@@ -2735,6 +2771,18 @@
 					"status": "ok",
 					"httpStatus": 200
 				},
+				"describe": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"relatedtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"query": {
+					"status": "ok",
+					"httpStatus": 200
+				},
 				"sync": {
 					"status": "failed",
 					"httpStatus": 500
@@ -3417,6 +3465,18 @@
 					"status": "ok"
 				},
 				"listtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"describe": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"relatedtypes": {
+					"status": "ok",
+					"httpStatus": 200
+				},
+				"query": {
 					"status": "ok",
 					"httpStatus": 200
 				},
