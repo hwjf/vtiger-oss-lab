@@ -1,6 +1,6 @@
 # Fresh-Install Matrix Summary
 
-Generated from checksum-verified official vtiger OSS release archives on PHP 8.2 and MariaDB
+Generated from checksum-verified official Vtiger Open Source release archives on PHP 8.2 and MariaDB
 10.11. The full operation registry, handler signatures, and safe API probe results are stored in
 `fresh-8.x.json`.
 
