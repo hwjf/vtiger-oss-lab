@@ -1,8 +1,13 @@
 #!/bin/sh
 set -eu
 
-if [ -s /var/www/html/config.inc.php ]; then
+if check-vtiger-install; then
 	exit 0
+fi
+
+if [ -s /var/www/html/config.inc.php ]; then
+	echo "incomplete vtiger installation detected; reset the lab volumes" >&2
+	exit 1
 fi
 
 base_url="http://127.0.0.1"
@@ -84,3 +89,5 @@ $accessKey = getenv("VTIGER_ACCESS_KEY");
 $statement->bind_param("s", $accessKey);
 $statement->execute();
 '
+
+check-vtiger-install

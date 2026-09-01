@@ -17,6 +17,7 @@ RUN apt-get update \
 	&& rm -rf /var/lib/apt/lists/*
 
 COPY vtiger.ini /usr/local/etc/php/conf.d/99-vtiger.ini
+COPY check-vtiger-install.sh /usr/local/bin/check-vtiger-install
 COPY install-vtiger.sh /usr/local/bin/install-vtiger
 COPY lab-entrypoint.sh /usr/local/bin/lab-entrypoint
 
@@ -29,7 +30,7 @@ RUN set -eux; \
 	rm /tmp/vtiger.tar.gz; \
 	touch /var/www/html/config.inc.php; \
 	chown -R www-data:www-data /var/www/html; \
-	chmod +x /usr/local/bin/install-vtiger /usr/local/bin/lab-entrypoint
+	chmod +x /usr/local/bin/check-vtiger-install /usr/local/bin/install-vtiger /usr/local/bin/lab-entrypoint
 
 WORKDIR /var/www/html
 ENTRYPOINT ["lab-entrypoint"]

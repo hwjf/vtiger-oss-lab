@@ -18,7 +18,6 @@ x-db: &db
     interval: 5s
     timeout: 5s
     retries: 60
-  networks: [lab]
 
 x-vtiger: &vtiger
   environment: &vtiger-environment
@@ -27,15 +26,15 @@ x-vtiger: &vtiger
     VTIGER_DB_NAME: vtiger
     VTIGER_ADMIN_PASSWORD: vtiger-lab-admin
     VTIGER_ACCESS_KEY: vtiger-lab-access-key
-  networks: [lab]
-  restart: unless-stopped
 
 services:
   db80:
     <<: *db
+    networks: [lab80]
     volumes: [db80:/var/lib/mysql]
   vtiger80:
     <<: *vtiger
+    networks: [lab80]
     build:
       context: .
       args:
@@ -54,7 +53,7 @@ services:
       test:
         [
           CMD-SHELL,
-          'test -f /var/www/html/.lab-install-complete && curl -fsS http://127.0.0.1/index.php >/dev/null',
+          'test -f /var/www/html/.lab-install-complete && check-vtiger-install && curl -fsS http://127.0.0.1/index.php >/dev/null',
         ]
       interval: 10s
       timeout: 5s
@@ -62,9 +61,11 @@ services:
 
   db81:
     <<: *db
+    networks: [lab81]
     volumes: [db81:/var/lib/mysql]
   vtiger81:
     <<: *vtiger
+    networks: [lab81]
     build:
       context: .
       args:
@@ -83,7 +84,7 @@ services:
       test:
         [
           CMD-SHELL,
-          'test -f /var/www/html/.lab-install-complete && curl -fsS http://127.0.0.1/index.php >/dev/null',
+          'test -f /var/www/html/.lab-install-complete && check-vtiger-install && curl -fsS http://127.0.0.1/index.php >/dev/null',
         ]
       interval: 10s
       timeout: 5s
@@ -91,9 +92,11 @@ services:
 
   db82:
     <<: *db
+    networks: [lab82]
     volumes: [db82:/var/lib/mysql]
   vtiger82:
     <<: *vtiger
+    networks: [lab82]
     build:
       context: .
       args:
@@ -112,7 +115,7 @@ services:
       test:
         [
           CMD-SHELL,
-          'test -f /var/www/html/.lab-install-complete && curl -fsS http://127.0.0.1/index.php >/dev/null',
+          'test -f /var/www/html/.lab-install-complete && check-vtiger-install && curl -fsS http://127.0.0.1/index.php >/dev/null',
         ]
       interval: 10s
       timeout: 5s
@@ -120,9 +123,11 @@ services:
 
   db83:
     <<: *db
+    networks: [lab83]
     volumes: [db83:/var/lib/mysql]
   vtiger83:
     <<: *vtiger
+    networks: [lab83]
     build:
       context: .
       args:
@@ -141,7 +146,7 @@ services:
       test:
         [
           CMD-SHELL,
-          'test -f /var/www/html/.lab-install-complete && curl -fsS http://127.0.0.1/index.php >/dev/null',
+          'test -f /var/www/html/.lab-install-complete && check-vtiger-install && curl -fsS http://127.0.0.1/index.php >/dev/null',
         ]
       interval: 10s
       timeout: 5s
@@ -149,9 +154,11 @@ services:
 
   db84:
     <<: *db
+    networks: [lab84]
     volumes: [db84:/var/lib/mysql]
   vtiger84:
     <<: *vtiger
+    networks: [lab84]
     build:
       context: .
       args:
@@ -170,14 +177,18 @@ services:
       test:
         [
           CMD-SHELL,
-          'test -f /var/www/html/.lab-install-complete && curl -fsS http://127.0.0.1/index.php >/dev/null',
+          'test -f /var/www/html/.lab-install-complete && check-vtiger-install && curl -fsS http://127.0.0.1/index.php >/dev/null',
         ]
       interval: 10s
       timeout: 5s
       retries: 120
 
 networks:
-  lab:
+  lab80: { internal: true }
+  lab81: { internal: true }
+  lab82: { internal: true }
+  lab83: { internal: true }
+  lab84: { internal: true }
 
 volumes:
   app80:

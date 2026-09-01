@@ -13,8 +13,8 @@ Generated from checksum-verified official Vtiger Open Source release archives on
 | 8.4.0         | Works            | Signature compatible       | Modern encoded `element`   | Registration/handler mismatch; HTTP 500 |
 
 All five fresh installations register the same eleven `mobile.*` operations and five `wsapp_*`
-operations. They remain accessible through the node's Advanced operations rather than first-class
-actions.
+operations. Integrations can access them through Vtiger's generic registered-operation API where
+appropriate, but this lab does not assess their behavior.
 
 The core read probes cover login, module listing, module description, relation types, and an
 ordered VTQL query.
